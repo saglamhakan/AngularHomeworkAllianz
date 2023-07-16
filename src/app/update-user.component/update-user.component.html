@@ -1,0 +1,30 @@
+
+<form (ngSubmit)="onSubmit()" [formGroup]="updateUserForm">
+    <div>
+        <label for="userId">User ID</label>
+        <br>
+        <input formControlName="userId" type="number" id="userId">
+    </div>
+    <div>
+        <label for="userName">
+            User Name
+        </label>
+        <input formControlName="userName" type="text" id="userName">
+    </div>
+    <div>
+        <label for="email">
+            Email
+        </label>
+        <input formControlName="email" type="text" id="email">
+    </div>
+    <div>
+        <label for="isActive">
+            Active
+        </label>
+        <select formControlName="isActive" name="isActive" id="isActive">
+            <option value="true">Active</option>
+            <option value="false">Passive</option>
+        </select>
+    </div>
+    <button class="button" type="submit">Update</button>
+</form>

@@ -1,0 +1,16 @@
+<div>
+  <label for="userId">User ID</label>
+  <input type="number" id="userId" [(ngModel)]="userId">
+</div>
+
+<div>
+  <label for="postId">Post ID</label>
+  <input type="number" id="postId" [(ngModel)]="postId">
+</div>
+<div>
+  <label for="categoryId">Category ID</label>
+  <input type="number" id="categoryId" [(ngModel)]="categoryId">
+</div>
+<button (click)="applyFilters()">Apply Filters</button>
+<button (click)="clearFilters()">Clear Filters</button>
+

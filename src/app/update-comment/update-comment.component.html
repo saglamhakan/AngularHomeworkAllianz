@@ -1,0 +1,30 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="updateCommentForm">
+    <div>
+        <label for ="commentId">Comment ID:</label>
+        <br>
+        <input formControlName="commentId" type="number" id="commentId">
+    </div>
+    <div>
+        <label for="postId">Post ID:</label>
+        <br>
+        <input formControlName="postId" type="number" id="postId">
+    </div>
+    <br>
+    <div>
+        <label for="userId">User ID:</label>
+        <br>
+        <input formControlName="userId" type="number" id="userId">
+    </div>
+    <div>
+        <label for="comment">Comment</label>
+        <input formControlName="comment" type="text" id="comment">
+    </div>
+    <div>
+        <label for="isConfirmed">Confirmed</label>
+        <select formControlName="isConfirmed" name="isConfirmed" id="isConfirmed">
+            <option value="true" selected>Confirmed</option>
+            <option value="false">Unconfirmed</option>
+        </select>
+    </div>
+    <button class="button" type="submit">Save</button>
+</form>

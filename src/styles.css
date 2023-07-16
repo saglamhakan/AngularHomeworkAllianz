@@ -1,0 +1,329 @@
+body {
+    background-color: #f8f8f8;
+  }
+  
+  .welcome-section {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .welcome-heading {
+    font-size: 28px;
+    color: #333;
+  }
+  
+  .navigation-links {
+    margin-top: 30px;
+  }
+  
+  .navigation-links a {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navigation-links a:hover {
+    background-color: #ddd;
+  }
+  
+  .link-icon {
+    margin-right: 10px;
+  }
+  
+  form {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  input[type="text"],
+  select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  
+  .button {
+    background-color: #337ab7;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #286090;
+  }
+  
+  .button:active {
+    background-color: #3e8e41;
+  }
+  
+  .button:focus {
+    outline: none;
+  }
+  
+  .button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  a:active {
+    color: #555;
+  }
+  
+  a:focus {
+    outline: none;
+  }
+  
+  .delete-button {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .delete-button:hover {
+    background-color: #d32f2f;
+  }
+  
+  .update-link,
+  .delete-button {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .update-link:hover,
+  .delete-button:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .add-category-button,
+  .add-comment-button,
+  .add-post-button,
+  .add-user-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #337ab7;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    border: none;
+  }
+  
+  .add-category-button:hover,
+  .add-comment-button:hover,
+  .add-post-button:hover,
+  .add-user-button:hover {
+    background-color: #286090;
+    border-radius: 10px;
+  }
+  
+  .add-user-button {
+    border-radius: 0;
+  }
+  
+  .add-user-container .button {
+    background-color: #337ab7;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 0;
+  }
+  
+  .add-user-container .button:hover {
+    background-color: #287d90;
+    border-radius: 0;
+  }
+  .post-detail-link {
+    display: inline-block;
+    padding: 10px;
+    background-color: #f2f2f2;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .post-detail-link:hover {
+    background-color: #ddd;
+  }
+  .post-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .post-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .post-table .update-link,
+  .post-table .delete-button {
+    display: inline-block;
+    padding: 5px 10px;
+    border: none;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 20px;
+  }
+  
+  .post-table .delete-button {
+    background-color: #e74c3c;
+  }
+  
+  .filter-container {
+    background-color: #f2f2f2;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .filter-container label {
+    margin-right: 10px;
+  }
+  
+  .filter-container input[type="number"] {
+    padding: 5px;
+  }
+  
+  .filter-buttons button {
+    padding: 5px 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  
+  .filter-buttons .clear-button {
+    background-color: #e74c3c;
+  }
+  
+  .filter-buttons button:hover {
+    background-color: #2980b9;
+  }
+  .pagination-container {
+    display: flex;
+    justify-content: right;
+    margin-top: 20px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  td {
+    background-color: #fff;
+  }
+  
+  tbody tr:nth-child(even) td {
+    background-color: #f8f8f8;
+  }
+  .mat-paginator li a {
+    display: inline-block;
+    padding: 6px 12px;
+    text-decoration: none;
+    background-color: #03a9f4;
+    color: #fff;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .mat-paginator li a:hover {
+    background-color: #039be5;
+  }
+  
+  .mat-paginator li.mat-paginator-page span {
+    background-color: #03a9f4;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 4px;
+  }
+  
+  .mat-paginator li.mat-paginator-page span.mat-select-placeholder {
+    font-style: italic;
+    color: initial;
+  }
+  .filter-button {
+    margin-left: 10px;
+  }
+  

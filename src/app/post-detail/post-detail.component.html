@@ -1,0 +1,42 @@
+  <div class="add-post-container">
+
+  <table>
+    <thead>
+      <tr>
+        <th>Post ID</th>
+        <th>User ID</th>
+        <th>Title</th>
+        <th>Content</th>
+        <th>View Count</th>
+        <th>Creation Date</th>
+        <th>Published</th>
+        <th>Update</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let post of postList.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage)">
+        <td>{{ post.postId }}</td>
+        <td>{{ post.userId }}</td>
+        <td>{{ post.title }}</td>
+        <td>{{ post.content }}</td>
+        <td>{{ post.viewCount }}</td>
+        <td>{{ post.creationDate }}</td>
+        <td>{{ post.isPublished }}</td>
+        <td><a class="update-link" [routerLink]="['/update-post', post.postId]">Update</a></td>
+        <td><button class="delete-button" (click)="deleteItem(post.postId)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="add-post-button-container">
+  <a class="add-post-button" routerLink="/add-post" routerLinkActive="active" ariaCurrentWhenActive="page" >Add Post</a>
+</div>
+
+<mat-paginator [length]="postList.length"
+                 [pageSize]="itemsPerPage"
+                 [pageIndex]="currentPage"
+                 [pageSizeOptions]="[3, 5, 10, 25, 50]"
+                 (page)="onPageChange($event)">
+  </mat-paginator>
+
+

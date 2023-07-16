@@ -1,0 +1,55 @@
+<div class="add-comment-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Comment ID</th>
+          <th>User ID</th>
+          <th>Post ID</th>
+          <th>Comments</th>
+          <th>Confirmed</th>
+          <th>Update</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let comment of filteredCommentList.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage)">
+          <td>{{ comment.commentId }}</td>
+          <td>{{ comment.userId }}</td>
+          <td>{{ comment.postId }}</td>
+          <td>{{ comment.comment }}</td>
+          <td>{{ comment.isConfirmed }}</td>
+          <td><a class="update-link" [routerLink]="['/update-comment', comment.commentId]">Update</a></td>
+          <td><button class="delete-button" (click)="deleteItem(comment.commentId)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div class="add-comment-button-container">
+    <a class="add-comment-button" routerLink="/add-comment" routerLinkActive="active" ariaCurrentWhenActive="page">
+      Add Comment
+    </a>
+  
+    <mat-paginator [length]="filteredCommentList.length"
+                   [pageSize]="itemsPerPage"
+                   [pageIndex]="currentPage"
+                   [pageSizeOptions]="[3, 5, 10, 25, 50]"
+                   (page)="onPageChange($event)">
+    </mat-paginator>
+  </div>
+  
+  <div class="filter-container">
+    <div class="filter-input">
+      <label for="postId">Post ID</label>
+      <input type="number" id="postId" [(ngModel)]="postId">
+    </div>
+    <div class="filter-buttons">
+      <button class="filter-button" (click)="applyFilters()">Apply Filters</button>
+      <button class="filter-button" (click)="clearFilters()">Clear Filters</button>
+    </div>
+  </div>
+  
+  
+  
+  
+  

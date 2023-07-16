@@ -1,0 +1,43 @@
+<div class="add-user-container">
+    <table>
+      <thead>
+        <tr>
+          <th>User ID</th>
+          <th>User Name</th>
+          <th>Email</th>
+          <th>Creation Date</th>
+          <th>Active</th>
+          <th>Update</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of userList.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage)">
+          <td>{{ user.userId }}</td>
+          <td>{{ user.userName }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.creationDate | date:'yyyy-MM-dd HH:mm:ss' }}</td>
+          <td>{{ user.isActive }}</td>
+          <td><a class="update-link" [routerLink]="['/update-user', user.userId]">Update</a></td>
+          <td><button class="delete-button" (click)="deleteItem(user.userId)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div class="add-user-button-container">
+    <a class="add-user-button" routerLink="/add-user" routerLinkActive="active" ariaCurrentWhenActive="page">Add User</a>
+  </div>
+  
+  
+  
+  <mat-paginator [length]="userList.length"
+                 [pageSize]="itemsPerPage"
+                 [pageIndex]="currentPage"
+                 [pageSizeOptions]="[3, 5, 10, 25, 50]"
+                 (page)="onPageChange($event)">
+  </mat-paginator>
+  
+  
+
+  

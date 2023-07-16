@@ -1,0 +1,34 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="updatePostForm">
+    <div>
+        <label for="postId">Post ID</label>
+        <input formControlName="postId" type="number" id="postId" [readonly]="true">
+    </div>
+    <div>
+        <label for="userId">User ID</label>
+        <input formControlName="userId" type="number" id="userId">
+    </div>
+    <div>
+        <label for="categoryId">Category ID</label>
+        <input formControlName="categoryId" type="number" id="categoryId">
+    </div>
+    <div>
+        <label for="title">Title</label>
+        <input formControlName="title" type="text" id="title">
+    </div>
+    <div>
+        <label for="content">Content</label>
+        <input formControlName="content" type="text" id="content">
+    </div>
+    <div>
+        <label for="viewCount">View Count</label>
+        <input formControlName="viewCount" type="number" id="viewCount">
+    </div>
+    <div>
+        <label for="isPublished">Published</label>
+        <select formControlName="isPublished" name="isPublished" id="isPublished">
+            <option value="true" selected>Published</option>
+            <option value="false">Unpublished</option>
+        </select>
+    </div>
+    <button class="button" type="submit">Save</button>
+</form>

@@ -1,0 +1,86 @@
+<div>
+    <table>
+      <tbody>
+        <tr>
+          <td><a class="post-detail-link" [routerLink]="['/post-detail', postList[0].postId]">Post Details</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <label for="userId">User ID</label>
+    <br>
+    <input type="number" id="userId" [(ngModel)]="userId">
+  </div>
+  
+  <div>
+    <label for="postId">Post ID</label>
+    <br>
+    <input type="number" id="postId" [(ngModel)]="postId">
+  </div>
+  <div>
+    <label for="categoryId">Category ID</label>
+    <br>
+    <input type="number" id="categoryId" [(ngModel)]="categoryId">
+  </div>
+  
+  <div class="filter-container">
+    <div class="filter-buttons">
+      <button class="apply-button" (click)="applyFilters()">Apply Filters</button>
+      <button class="clear-button" (click)="clearFilters()">Clear Filters</button>
+    </div>
+  </div>
+  <br>
+  <table class="post-table">
+    <tbody>
+      <tr *ngFor="let post of filteredPostList">
+        <td>{{ post.postId }}</td>
+        <td>{{ post.userId }}</td>
+        <td>{{ post.title }}</td>
+        <td>{{ post.content }}</td>
+        <td>{{ post.viewCount }}</td>
+        <td>{{ post.creationDate }}</td>
+        <td>{{ post.isPublished }}</td>
+        <td><a class="update-link" [routerLink]="['/update-post', post.postId]">Update</a></td>
+        <td><button class="delete-button" (click)="deleteItem(post.postId)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  
+  
+  
+  
+   <!-- <table>
+      <thead>
+        <tr>
+          <th>Post ID</th>
+          <th>User ID</th>
+          <th>Title</th>
+          <th>Content</th>
+          <th>View Count</th>
+          <th>Creation Date</th>
+          <th>Published</th>
+          <th>Update</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let post of postList">
+          <td>{{ post.postId }}</td>
+          <td>{{ post.userId }}</td>
+          <td>{{ post.title }}</td>
+          <td>{{ post.content }}</td>
+          <td>{{ post.viewCount }}</td>
+          <td>{{ post.creationDate }}</td>
+          <td>{{ post.isPublished }}</td>
+          <td><a class="update-link" [routerLink]="['/update-post', post.postId]">Update</a></td>
+          <td><button class="delete-button" (click)="deleteItem(post.postId)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="add-post-button-container">
+    <a class="add-post-button" routerLink="/add-post" routerLinkActive="active" ariaCurrentWhenActive="page" >Add Post</a>
+  </div>
+-->
